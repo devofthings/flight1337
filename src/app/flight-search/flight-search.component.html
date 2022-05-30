@@ -25,68 +25,68 @@
       </div>
     </form>
   </div>
-  <div class="card">
-    <table class="table table-contensed" *ngIf="flights.length > 0">
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>From</th>
-          <th>To</th>
-          <th>Date</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tr
-        *ngFor="let flight of flights"
-        [class.active]="flight.id === selectedFlight?.id"
-      >
-        <td>{{ flight.id }}</td>
-        <td>{{ flight.from }}</td>
-        <td>{{ flight.to }}</td>
-        <td>{{ flight.date | date: "dd.MM.YYYY HH:mm" }}</td>
-        <td>
-          <a
-            (click)="select(flight)"
-            [class.active]="flight.id === selectedFlight?.id"
-            >Select</a
-          >
-        </td>
+</div>
+
+<div class="card">
+  <table class="table table-contensed" *ngIf="flights.length > 0">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date</th>
+        <th></th>
       </tr>
-    </table>
-  </div>
-  <div class="card" *ngIf="selectedFlight">
-    <div class="content">
-      <pre>{{ selectedFlight | json }}</pre>
-      <div class="alert" *ngIf="message.length > 0">
-        {{ message }}
-      </div>
-
-      <div class="form-group">
-        <label>ID:</label>
-        <input [(ngModel)]="selectedFlight.id" name="id" class="form-control" />
-      </div>
-      <div class="form-group">
-        <label>From:</label>
-        <input
-          [(ngModel)]="selectedFlight.from"
-          name="from"
-          class="form-control"
-        />
-      </div>
-      <div class="form-group">
-        <label>To:</label>
-        <input [(ngModel)]="selectedFlight.to" name="to" class="form-control" />
-      </div>
-      <div class="form-group">
-        <label>Date:</label>
-        <input
-          [(ngModel)]="selectedFlight.date"
-          name="date"
-          class="form-control"
-        />
-      </div>
-
-      <button class="btn btn-default" (click)="save()">Save</button>
+    </thead>
+    <tr
+      *ngFor="let flight of flights"
+      [class.active]="flight.id === selectedFlight?.id"
+    >
+      <td>{{ flight.id }}</td>
+      <td>{{ flight.from }}</td>
+      <td>{{ flight.to }}</td>
+      <td>{{ flight.date | date: "dd.MM.YYYY HH:mm" }}</td>
+      <td>
+        <a
+          (click)="select(flight)"
+          [class.active]="flight.id === selectedFlight?.id"
+          >Select</a
+        >
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="card" *ngIf="selectedFlight">
+  <div class="content">
+    <div class="alert" *ngIf="message.length > 0">
+      {{ message }}
     </div>
+
+    <div class="form-group">
+      <label>ID:</label>
+      <input [(ngModel)]="selectedFlight.id" name="id" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>From:</label>
+      <input
+        [(ngModel)]="selectedFlight.from"
+        name="from"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label>To:</label>
+      <input [(ngModel)]="selectedFlight.to" name="to" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <input
+        [(ngModel)]="selectedFlight.date"
+        name="date"
+        class="form-control"
+      />
+    </div>
+
+    <button class="btn btn-default" (click)="save()">Save</button>
   </div>
 </div>

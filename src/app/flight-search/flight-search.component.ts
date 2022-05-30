@@ -8,8 +8,8 @@ import { Flight } from "../model/flight";
   styleUrls: ["./flight-search.component.scss"],
 })
 export class FlightSearchComponent implements OnInit {
-  from = "";
-  to = "";
+  from = "Hamburg";
+  to = "Graz";
   flights: Flight[] = [];
   selectedFlight: Flight | undefined;
   message = "";
