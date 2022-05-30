@@ -22,7 +22,6 @@ import { FlightService } from "./services/flight.service";
     {
       provide: FlightService,
       useFactory: createFlightService,
-      deps: [HttpClient],
     },
   ],
   bootstrap: [AppComponent],
