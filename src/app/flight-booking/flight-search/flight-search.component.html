@@ -27,7 +27,23 @@
   </div>
 </div>
 
+<div class="row">
+  <div
+    *ngFor="let flight of flights"
+    class="col-xs-12 col-sm-6 col-md-4 col-lg-3"
+  >
+    <flight-card [item]="flight" [(selected)]="basket[flight.id]">
+    </flight-card>
+  </div>
+</div>
+
 <div class="card">
+  <div class="content">
+    <pre>{{ basket | json }}</pre>
+  </div>
+</div>
+
+<!-- <div class="card">
   <table class="table table-contensed" *ngIf="flights.length > 0">
     <thead>
       <tr>
@@ -94,5 +110,5 @@
     </div>
 
     <button class="btn btn-default" (click)="save()">Save</button>
-  </div>
-</div>
+  </div> 
+</div> -->

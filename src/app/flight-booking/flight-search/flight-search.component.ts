@@ -2,6 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { Flight } from "../../model/flight";
 import { FlightService } from "../../services/flight.service";
 
+export interface Basket {
+  [key: string]: boolean;
+}
+
 @Component({
   selector: "flight-search",
   templateUrl: "./flight-search.component.html",
@@ -13,6 +17,11 @@ export class FlightSearchComponent implements OnInit {
   flights: Flight[] = [];
   selectedFlight: Flight | undefined;
   message = "";
+
+  basket: Basket = {
+    "3": true,
+    "5": true,
+  };
 
   constructor(private flightService: FlightService) {}
 
