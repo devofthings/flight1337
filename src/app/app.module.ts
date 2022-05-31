@@ -9,6 +9,7 @@ import { AppComponent } from "./app.component";
 import { FlightSearchComponent } from "./flight-search/flight-search.component";
 import { createFlightService } from "./factories/flight-service.factory";
 import { FlightService } from "./services/flight.service";
+import { CityPipe } from "./shared/pipes/city.pipe";
 
 @NgModule({
   imports: [BrowserModule, HttpClientModule, FormsModule],
@@ -17,6 +18,7 @@ import { FlightService } from "./services/flight.service";
     SidebarComponent,
     NavbarComponent,
     FlightSearchComponent,
+    CityPipe,
   ],
   providers: [
     {
