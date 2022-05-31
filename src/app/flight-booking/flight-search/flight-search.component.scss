@@ -6,3 +6,7 @@
 .alert {
   background-color: teal;
 }
+
+input.ng-invalid {
+  border-left: 5px solid crimson;
+}
