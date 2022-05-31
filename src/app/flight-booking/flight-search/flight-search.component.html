@@ -38,7 +38,7 @@
 
       <div class="form-group">
         <button
-          [disabled]="!to || !from || form?.controls?.['from']?.errors || form?.controls?.['to']?.errors"
+          [disabled]="!to || !from || form?.invalid"
           (click)="search()"
           class="btn btn-default"
         >
