@@ -39,7 +39,7 @@
       </tr>
     </thead>
     <tr
-      *ngFor="let flight of flights"
+      *ngFor="let flight of flights | statusFilter: false"
       [class.active]="flight.id === selectedFlight?.id"
     >
       <td>{{ flight.id }}</td>
