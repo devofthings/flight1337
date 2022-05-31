@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Flight } from "../model/flight";
-import { FlightService } from "../services/flight.service";
+import { Flight } from "../../model/flight";
+import { FlightService } from "../../services/flight.service";
 
 @Component({
   selector: "flight-search",
