@@ -45,7 +45,13 @@
       <td>{{ flight.id }}</td>
       <td>{{ flight.from | city: "short" }}</td>
       <td>{{ flight.to | city: "long" }}</td>
-      <td>{{ flight.date | date: "dd.MM.YYYY HH:mm" }}</td>
+      <td
+        [ngStyle]="{
+          color: flight.delayed | statusColor: flight.id === selectedFlight?.id
+        }"
+      >
+        {{ flight.date | date: "dd.MM.YYYY HH:mm" }}
+      </td>
       <td>
         <a
           (click)="select(flight)"
