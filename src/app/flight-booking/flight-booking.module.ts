@@ -7,6 +7,7 @@ import { FlightCardComponent } from "./flight-card/flight-card.component";
 import { FlightValidationErrorsComponent } from "./flight-validation-errors/flight-validation-errors.component";
 import { RouterModule } from "@angular/router";
 import { FLIGHT_ROUTES } from "./flight-booking.routes";
+import { FlightEditComponent } from './flight-edit/flight-edit.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FLIGHT_ROUTES } from "./flight-booking.routes";
     FlightCardComponent,
     FlightValidationErrorsComponent,
     FlightSearchComponent,
+    FlightEditComponent,
   ],
   imports: [
     CommonModule,
