@@ -11,7 +11,7 @@ import { FlightService } from "./services/flight.service";
 import { SharedModule } from "./shared/shared.module";
 import { FlightBookingModule } from "./flight-booking/flight-booking.module";
 import { HomeComponent } from "./home/home.component";
-import { RouterModule } from "@angular/router";
+import { PreloadAllModules, RouterModule } from "@angular/router";
 import { APP_ROUTES } from "./app.routes";
 
 @NgModule({
@@ -19,8 +19,8 @@ import { APP_ROUTES } from "./app.routes";
     BrowserModule,
     HttpClientModule,
     SharedModule,
-    FlightBookingModule,
-    RouterModule.forRoot(APP_ROUTES),
+    // FlightBookingModule,	// <-- This would prevent lazy loading
+    RouterModule.forRoot(APP_ROUTES, { preloadingStrategy: PreloadAllModules }),
   ],
   declarations: [
     AppComponent,

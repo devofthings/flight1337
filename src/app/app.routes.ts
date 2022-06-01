@@ -12,6 +12,13 @@ export const APP_ROUTES: Routes = [
     component: HomeComponent,
   },
   {
+    path: "flight-booking",
+    loadChildren: () =>
+      import("./flight-booking/flight-booking.module").then(
+        (module) => module.FlightBookingModule
+      ),
+  },
+  {
     path: "**",
     redirectTo: "home",
   },
