@@ -20,13 +20,16 @@ describe("FlightService", () => {
 
   it("should be created", () => {
     service.search("Graz", "Hamburg").subscribe((flights) => {
-      expect(flights.length).toBe(1);
+      expect(flights.length).toBe(2);
     });
 
     const ctrl = TestBed.inject(HttpTestingController);
     const req = ctrl.expectOne(
       "http://www.angular.at/api/flight?from=Graz&to=Hamburg"
     );
-    req.flush([{ id: 7 }]);
+    req.flush([
+      { id: 1, from: "...", to: "...", date: "..." },
+      { id: 2, from: "graz", to: "hamburg", date: "..." },
+    ]);
   });
 });
