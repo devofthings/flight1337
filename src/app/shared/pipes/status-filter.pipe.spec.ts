@@ -1,7 +1,7 @@
-import { StatusFilterPipe } from './status-filter.pipe';
+import { StatusFilterPipe } from "./status-filter.pipe";
 
-describe('StatusFilterPipe', () => {
-  it('create an instance', () => {
+fdescribe("StatusFilterPipe", () => {
+  it("create an instance", () => {
     const pipe = new StatusFilterPipe();
     expect(pipe).toBeTruthy();
   });

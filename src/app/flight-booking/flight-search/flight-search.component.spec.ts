@@ -7,7 +7,7 @@ import { FlightService } from "src/app/services/flight.service";
 import { FlightBookingModule } from "../flight-booking.module";
 import { FlightSearchComponent } from "./flight-search.component";
 
-describe("flight-search.component", () => {
+fdescribe("flight-search.component", () => {
   let component: FlightSearchComponent;
   let fixture: ComponentFixture<FlightSearchComponent>;
 

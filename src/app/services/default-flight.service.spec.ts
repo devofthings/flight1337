@@ -3,7 +3,7 @@ import { TestBed } from "@angular/core/testing";
 
 import { DefaultFlightService } from "./default-flight.service";
 
-describe("DefaultFlightService", () => {
+fdescribe("DefaultFlightService", () => {
   let service: DefaultFlightService;
 
   beforeEach(() => {

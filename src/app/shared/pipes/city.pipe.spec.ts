@@ -1,6 +1,6 @@
 import { CityPipe } from "./city.pipe";
 
-describe("CityPipe", () => {
+fdescribe("CityPipe", () => {
   it("create an instance", () => {
     const pipe = new CityPipe();
     expect(pipe).toBeTruthy();

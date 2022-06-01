@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FlightValidationErrorsComponent } from './flight-validation-errors.component';
+import { FlightValidationErrorsComponent } from "./flight-validation-errors.component";
 
-describe('FlightValidationErrorsComponent', () => {
+fdescribe("FlightValidationErrorsComponent", () => {
   let component: FlightValidationErrorsComponent;
   let fixture: ComponentFixture<FlightValidationErrorsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FlightValidationErrorsComponent ]
-    })
-    .compileComponents();
+      declarations: [FlightValidationErrorsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('FlightValidationErrorsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

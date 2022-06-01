@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FlightCardComponent } from './flight-card.component';
+import { FlightCardComponent } from "./flight-card.component";
 
-describe('FlightCardComponent', () => {
+fdescribe("FlightCardComponent", () => {
   let component: FlightCardComponent;
   let fixture: ComponentFixture<FlightCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FlightCardComponent ]
-    })
-    .compileComponents();
+      declarations: [FlightCardComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('FlightCardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
