@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { FlightValidationErrorsComponent } from "./flight-validation-errors.component";
 
-fdescribe("FlightValidationErrorsComponent", () => {
+describe("FlightValidationErrorsComponent", () => {
   let component: FlightValidationErrorsComponent;
   let fixture: ComponentFixture<FlightValidationErrorsComponent>;
 

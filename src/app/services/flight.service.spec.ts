@@ -7,7 +7,7 @@ import {
 import { FlightService } from "./flight.service";
 import { DefaultFlightService } from "./default-flight.service";
 
-fdescribe("FlightService", () => {
+describe("FlightService", () => {
   let service: FlightService;
 
   beforeEach(() => {

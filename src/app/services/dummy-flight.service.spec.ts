@@ -2,7 +2,7 @@ import { TestBed } from "@angular/core/testing";
 
 import { DummyFlightService } from "./dummy-flight.service";
 
-fdescribe("DummyFlightService", () => {
+describe("DummyFlightService", () => {
   let service: DummyFlightService;
 
   beforeEach(() => {
