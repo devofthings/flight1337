@@ -12,8 +12,8 @@ export interface Basket {
   styleUrls: ["./flight-search.component.scss"],
 })
 export class FlightSearchComponent implements OnInit {
-  from = "Hamburg";
-  to = "Graz";
+  from: string | undefined;
+  to: string | undefined;
   flights: Flight[] = [];
   selectedFlight: Flight | undefined;
   message = "";
@@ -28,14 +28,16 @@ export class FlightSearchComponent implements OnInit {
   ngOnInit(): void {}
 
   search(): void {
-    this.flightService.search(this.from, this.to).subscribe({
-      next: (flights: Flight[]) => {
-        this.flights = flights;
-      },
-      error: (errResp) => {
-        console.error("Error loading flights", errResp);
-      },
-    });
+    if (this.from && this.to) {
+      this.flightService.search(this.from, this.to).subscribe({
+        next: (flights: Flight[]) => {
+          this.flights = flights;
+        },
+        error: (errResp) => {
+          console.error("Error loading flights", errResp);
+        },
+      });
+    }
   }
 
   save(): void {
@@ -46,7 +48,7 @@ export class FlightSearchComponent implements OnInit {
           this.message = "Success!";
         },
         error: (errResp) => {
-          console.error("Error saving flghts", errResp);
+          console.error("Error saving flights", errResp);
           this.message = "Error: " + errResp.message;
         },
       });
